@@ -13,19 +13,19 @@ h3, h4{
   display: block;
 }
 .titulo .grande{
-  font-size: 50px;
+  font-size: clamp(30px, 9vw, 50px);
 }
 .titulo .medio{
-  font-size: 30px;
+  font-size: clamp(18px, 6vw, 30px);
 }
 .titulo .rojo{
-  font-size: 35px;
+  font-size: clamp(22px, 7vw, 35px);
   color: firebrick;
 }
 
 
-.caja { 
-  
+.caja {
+
     width: 350px;
     height: 200px;
     background: rgb(228, 101, 101);
@@ -35,7 +35,7 @@ h3, h4{
 
     margin: 10px;
 }
-.subcaja { 
+.subcaja {
     background: #f7e6a3;
     width: 100%;
     height: 90px;
@@ -48,7 +48,7 @@ h3, h4{
     border-bottom:4px solid rgb(3, 3, 3);
 
     margin: 30px auto;
-  
+
 }
 .contenedor{
   display: grid;
@@ -63,7 +63,7 @@ h3, h4{
     color: rgb(255, 255, 255);
     margin: 5px;
     margin-top: 15px;
-    font-size:xx-large;
+    font-size: clamp(22px, 6vw, 28px);
 }
 .titulo {
     font-family: 'Rye', cursive;
@@ -81,9 +81,19 @@ h3, h4{
     margin: 20px;
 }
 
+.lista-extra {
+    margin: 10px 20px 20px;
+    padding-left: 20px;
+    color: #ddd;
+    font-size: 15px;
+}
+.lista-extra li {
+    margin: 4px 0;
+}
+
 .separar{
   display: flex;
-justify-content: space-between
+  justify-content: space-between;
 }
 
 .boton {
@@ -115,7 +125,7 @@ justify-content: space-between
 }
 
 
-.promo h6,
+.promo h3,
 .promo p,
 .promo span {
     margin: 5px 0;
@@ -123,11 +133,6 @@ justify-content: space-between
 .nombre{
   margin: 15px;
   font-size: 22px;
-}
-@media (max-width: 600px){
-  .contenedor{
-    grid-template-columns: 1fr;
-  }
 }
 
 .contenedor-principal{
@@ -162,7 +167,7 @@ justify-content: space-between
 
 .nav-logo {
     font-family: 'Rye', cursive;
-    font-size: 22px;
+    font-size: 18px;
     color: firebrick;
 }
 
@@ -184,6 +189,26 @@ justify-content: space-between
 
 .nav-links a:hover {
     color: firebrick;
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
+.boton-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.boton-menu span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
 }
 
 .campeones {
@@ -252,17 +277,6 @@ justify-content: space-between
     margin: 0;
 }
 
-@media (max-width: 600px) {
-    .campeones {
-        grid-template-columns: 1fr;
-    }
-  .hero{
-    height: 80vh;
-    background-position: center top;
-  }
-
-}
-
 .hero{
   background-image: url('taco1.png');
   background-size: cover;
@@ -270,4 +284,50 @@ justify-content: space-between
   background-repeat: no-repeat;
   height: 550px;
   width: 100%;
+}
+
+/* ====== RESPONSIVE ====== */
+
+@media (max-width: 700px){
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 20px 30px;
+    gap: 18px;
+    border-bottom: 2px solid firebrick;
+  }
+  .nav-links.abierto {
+    display: flex;
+  }
+  .boton-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px){
+  .contenedor{
+    grid-template-columns: 1fr;
+  }
+  .campeones {
+    grid-template-columns: 1fr;
+  }
+  .hero{
+    height: 45vh;
+    background-position: center top;
+  }
+  .boton {
+    padding: 13px 22px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  .subcaja {
+    height: auto;
+    padding: 16px 0;
+  }
 }
