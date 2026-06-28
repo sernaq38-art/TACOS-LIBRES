@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOS TACOS LIBRES</title>
     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
@@ -9,12 +11,17 @@
 
 <nav class="navbar">
     <span class="nav-logo">★LOS TACOS LIBRES★</span>
-    <ul class="nav-links">
+
+    <ul class="nav-links" id="navLinks">
         <li><a href="#promos">Promos</a></li>
         <li><a href="#menu">Menú</a></li>
         <li><a href="#ubicacion">Ubicación</a></li>
         <li><a href="#campeones">Campeones</a></li>
     </ul>
+
+    <button class="boton-menu" id="botonMenu" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
 
 <div class="hero"></div>
@@ -53,28 +60,28 @@
             <h3 class="nombre">🔥🌶️ "Martes de Tacos Bien Machín"</h3>
             <p>2x1 en tacos al pastor</p>
             <p>💲 20 MXN c/u</p>
-            <span>"PA" QUE REPITA</span>
+            <span>"PA' QUE REPITA"</span>
         </div>
 
         <div class="promo">
             <h3 class="nombre">🥊👑 "El Campeón del Barrio"</h3>
             <p>15 tacos + bebida grande</p>
             <p>💲 $220 MXN</p>
-            <span>"SOLO PARA LOS QUE SI AGAUNTAN"</span>
+            <span>"SOLO PARA LOS QUE SÍ AGUANTAN"</span>
         </div>
 
         <div class="promo">
             <h3 class="nombre">🌮⚡ "Round Rápido"</h3>
             <p>3 tacos + agua fresca</p>
             <p>💲 $55 MXN</p>
-            <span>"RAPIDO, BARATO Y A TODA MADRE"</span>
+            <span>"RÁPIDO, BARATO Y A TODA MADRE"</span>
         </div>
 
         <div class="promo">
             <h3 class="nombre">🌮😈 "El Pecado Doble"</h3>
-            <p>tacos doble carne</p>
+            <p>Tacos doble carne</p>
             <p>💲 $35 MXN</p>
-            <span>"NO ES PECADO SI SABE ASI"</span>
+            <span>"NO ES PECADO SI SABE ASÍ"</span>
         </div>
 
     </div>
@@ -108,49 +115,50 @@
     </div>
 </div>
 
-<div  id="menu">    
-    <div">
+<div id="menu">
+    <div>
         <h3 class="subtitulo">CHECATE ESTO</h3>
     </div>
 
     <ul class="subtitulo">
-        <li>tacos al pastor</li>
-        <li>tacos de tripitas</li>
-        <li>tacos de bistec</li>
-        <li>tacos de chorizo</li>
-        <li>tacos de suadero</li>
+        <li>Tacos al pastor</li>
+        <li>Tacos de tripitas</li>
+        <li>Tacos de bistec</li>
+        <li>Tacos de chorizo</li>
+        <li>Tacos de suadero</li>
     </ul>
 
-    <h3>TAMBIEN CONTAMOS CON:</h3>
+    <h3 class="subtitulo">TAMBIÉN CONTAMOS CON:</h3>
 
-    <h4>BURRITOS</h4>
-    <ul>
+    <h4 class="subtitulo">BURRITOS</h4>
+    <ul class="lista-extra">
         <li>Frijoles con asadero</li>
-        <li>pastor</li>
-        <li>bistec</li>
+        <li>Pastor</li>
+        <li>Bistec</li>
         <li>Pregunte en caja</li>
     </ul>
 
-    <h4>ADEMAS DE:</h4>
-    <ul>
-        <li>gringas</li>
-        <li>y un postre diferente cada fin de semana</li>
+    <h4 class="subtitulo">ADEMÁS DE:</h4>
+    <ul class="lista-extra">
+        <li>Gringas</li>
+        <li>Y un postre diferente cada fin de semana</li>
     </ul>
 </div>
 
     <div id="ubicacion" style="text-align: center;">
-        <h3>📍 Ubicación</h3>
+        <h3 class="subtitulo">📍 Ubicación</h3>
         <p>Col. Lázaro Cárdenas</p>
-        <h3>Horarios</h3>
-        <p>Todos los dias 6pm - 2am</p>
+        <h3 class="subtitulo">Horarios</h3>
+        <p>Todos los días 6pm - 2am</p>
     </div>
 
     <div style="text-align: center; margin-top: 30px;">
         <a href="https://wa.me/526391104936" class="whatsapp">
-            Ordena por WatsApp ahora
+            Ordena por WhatsApp ahora
         </a>
     </div>
 
 </div>
+<script src="script.js"></script>
 </body>
 </html>
